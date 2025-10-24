@@ -1,0 +1,62 @@
+def main()
+No parameters
+
+Display settings
+(no parameters)
+screen_width = width of screen
+screen_heighte = height of screen
+screen = display set_mode
+display.set_caption = caption
+
+Entities
+
+Image background
+(no parameters)
+background = surface display size
+background image = loads background image
+pygame.transform.scale = sets scale of image to display
+
+Load image
+
+    fairy = pygame.image.load("fairy1.png")
+    fairy = fairy.convert_alpha()
+    fairy = pygame.transform.scale(fairy, (100, 100))
+    fairy_rect = fairy.get_rect()
+
+Variables
+Set variables for the image
+x=0
+y=200
+
+Loop variables
+clock = pygame.time.Clock()
+keepGoing = True
+
+Loop
+
+clock.tick(30)
+
+ #Events
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                keepGoing = False
+
+Modify values
+Movement from right to left.  Left is + value and right is - value
+
+Boundries
+modify boundries when fairy goes off screen.  Reset to screen width.
+faiy_x < fairy.get_width():
+fairy_x = screen_width
+
+Screen refresh.
+screen.blit = background image at 0,0
+screen.blit gets fairy at the x and y variables fairy_x and fairy_y
+pgame.display.flip
+
+
+ pygame.quit()
+
+if __name__ == "__main__":
+    main()
+
